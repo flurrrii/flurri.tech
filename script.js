@@ -58,3 +58,9 @@ updatePage = () => {
 updatePage();
 
 window.addEventListener('hashchange', updatePage);
+
+const tauser = document.getElementById("tauser");
+tauser.addEventListener('click', () => {
+   let honk = new Audio("/assets/honk.mp3");
+   honk.play()
+});
