@@ -148,6 +148,10 @@ img {
   transform: scale(1.1) rotate(10deg);
 }
 
+#tauser:active {
+  transform: scale(0.9) rotate(-10deg);
+}
+
 #about h2 {
   position: absolute;
   bottom: 40px;
