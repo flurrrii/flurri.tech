@@ -171,10 +171,6 @@ img {
   }
 }
 
-#projects {
-  padding: 15px;
-}
-
 .project {
   position: relative;
   display: flex;
@@ -187,6 +183,7 @@ img {
   cursor: pointer;
   line-height: 20px;
   align-items: center;
+  margin: 15px;
 }
 
 .projectBg {
@@ -224,7 +221,6 @@ img {
   padding: 0 15px;
   border: 0;
   border-radius: 14px;
-  cursor: pointer;
   background-color: var(--logic1);
   color: #fff;
   font-size: 17px;
