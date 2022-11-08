@@ -121,7 +121,7 @@ clickCat.addEventListener("click", () => {
         setTimeout(() => {
             addAchievement('meet bosley');
         }, 3000); 
-    } else if(data.clicks = 100000){ 
+    } else if(data.clicks == 100000){ 
         addAchievement('what have you done')
     }
     clickFeedback(data.clickPower);
