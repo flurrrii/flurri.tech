@@ -216,7 +216,7 @@ function bosley() {
     const bosley = document.createElement("div");
     bosley.className = "bosley";
     document.body.appendChild(bosley);
-    const dun = new Audio("/assets/dun.mp3");
+    const dun = new Audio("/ac/assets/dun.mp3");
     dun.play();
     setTimeout(() => {
         bosley.remove();
@@ -276,7 +276,7 @@ function addAchievement(achievement) {
     if(achievementData.completed) return;
     const achievementElem = document.createElement("div");
     achievementElem.className = "achievement";
-    achievementElem.innerHTML = `<div><h2>${achievement}</h2><p>${achievementData.description}</p></div><img src="/assets/achievements/${achievementData.image}">`;
+    achievementElem.innerHTML = `<div><h2>${achievement}</h2><p>${achievementData.description}</p></div><img src="/ac/assets/achievements/${achievementData.image}">`;
     achievementElem.addEventListener("click", showAchievementPopup);
     achievementData.completed = true;
     game.appendChild(achievementElem);
@@ -294,7 +294,7 @@ function showAchievementPopup() {
     const achievements = data.achievements;
     for(let i in achievements) {
         const achievement = achievements[i];
-        popup.innerHTML += `<div class="achievementPopupachievement" ${!achievement.completed ? `style="opacity: 0.5"` : ""}><div><h2>${i}</h2><p>${achievement.completed ? achievement.description : "???"}</p></div><img src="/assets/achievements/${achievement.image}"></div>`;
+        popup.innerHTML += `<div class="achievementPopupachievement" ${!achievement.completed ? `style="opacity: 0.5"` : ""}><div><h2>${i}</h2><p>${achievement.completed ? achievement.description : "???"}</p></div><img src="/ac/assets/achievements/${achievement.image}"></div>`;
     }
     document.body.appendChild(popup);
 }
