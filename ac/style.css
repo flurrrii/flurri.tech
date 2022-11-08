@@ -15,16 +15,16 @@ body{
 }
 
 *{
-    cursor: url("/assets/cursors/default.png"), default;
+    cursor: url("/ac/assets/cursors/default.png"), default;
     user-select: none;
 }
 
 button{
-    cursor: url("/assets/cursors/pointer.png"), pointer;
+    cursor: url("/ac/assets/cursors/pointer.png"), pointer;
 }
 
 button:active{
-    cursor: url("/assets/cursors/clicking.png"), pointer;
+    cursor: url("/ac/assets/cursors/clicking.png"), pointer;
 }
 
 #upgrades{
@@ -88,17 +88,17 @@ button:active{
 }
 
 #click{
-    background-image: url("/assets/click.png");
+    background-image: url("/ac/assets/click.png");
     width: 449px;
     height: 367px;
     animation: pulse 2s infinite;
-    cursor: url("/assets/cursors/pointer.png"), pointer;
+    cursor: url("/ac/assets/cursors/pointer.png"), pointer;
     transition: rotate 0.2s;
 }
 
 #click:active{
     rotate: -1deg;
-    cursor: url("/assets/cursors/clicking.png"), pointer;
+    cursor: url("/ac/assets/cursors/clicking.png"), pointer;
 }
 
 @keyframes pulse {
@@ -188,12 +188,12 @@ button:active{
     right: 0;
     width: 198px;
     height: 331px;
-    background-image: url("/assets/lily.png");
+    background-image: url("/ac/assets/lily.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     animation: lily 1s;
-    cursor: url("/assets/cursors/pointer.png"), pointer;
+    cursor: url("/ac/assets/cursors/pointer.png"), pointer;
     transition: bottom 1s;
 }
 
@@ -221,7 +221,7 @@ button:active{
     width: 433px;
     height: 577px;
     transform: translate(-50%, -50%) scale(2);
-    background-image: url("/assets/bosley.png");
+    background-image: url("/ac/assets/bosley.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -244,7 +244,7 @@ button:active{
     top: 50%;
     width: 217px;
     height: 283px;
-    background-image: url("/assets/farrah.png");
+    background-image: url("/ac/assets/farrah.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -355,6 +355,6 @@ button:active{
     border-radius: 14px;
     padding: 10px;
     background-color: #fff;
-    cursor: url("/assets/cursors/pointer.png"), pointer;
+    cursor: url("/ac/assets/cursors/pointer.png"), pointer;
     transition: opacity .3s;
 }
