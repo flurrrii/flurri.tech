@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--YWJvb2J5IGlzIHNtYXJ0ZXIgdGhhbiBmbHVycmk=-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Abooby Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/assets/upgrades/cursor.png">
+</head>
+
+<body>
+    <div id="intro">
+        <img src="/assets/icon.png">
+    </div>
+    <div id="game">
+        <div id="game-center">
+            <div id="click"></div>
+            <h1 id="clicks">0</h1>
+        </div>
+        <button id="showAchievements">show achievements 🏆</button>
+    </div>
+    <div id="upgrades">
+        <!--<select id="buyAmount">
+            <option selected value='1'>Buy 1</option>
+            <option value='2'>Buy 10</option>
+            <option value='3'>Buy 100</option>
+        </select>-->
+        <div id="upgradecursor" class="upgrade disabled">
+            <img src="/assets/upgrades/cursor.png">
+            <div>
+                <h2>cursor</h2>
+                <p class="upgradeInfo"><b>Cost</b>: 50 - <b>Owned</b>: 0</p>
+                <button class="buyButton">buy 1</button>
+            </div>
+        </div>
+        <div id="upgradebee" class="upgrade disabled">
+            <img src="/assets/upgrades/bee.png">
+            <div>
+                <h2>bee</h2>
+                <p class="upgradeInfo"><b>Cost</b>: 250 - <b>Owned</b>: 0</p>
+                <button class="buyButton">buy 1</button>
+            </div>
+        </div>
+        <div id="upgradeburgerbot" class="upgrade disabled">
+            <img src="/assets/upgrades/burgerbot.png">
+            <div>
+                <h2>burger bot</h2>
+                <p class="upgradeInfo"><b>Cost</b>: 5.0K - <b>Owned</b>: 0</p>
+                <button class="buyButton">buy 1</button>
+            </div>
+        </div>
+        <div id="upgradeabicrab" class="upgrade disabled">
+            <img src="/assets/upgrades/abicrab.png">
+            <div>
+                <h2>abicrab</h2>
+                <p class="upgradeInfo"><b>Cost</b>: 25.0K - <b>Owned</b>: 0</p>
+                <button class="buyButton">buy 1</button>
+            </div>
+        </div>
+        <div id="upgradesmile" class="upgrade disabled">
+            <img src="/assets/upgrades/-_.png">
+            <div>
+                <h2 style="font-family: Arial;">:&gt;</h2>
+                <p class="upgradeInfo"><b>Cost</b>: 100.0K - <b>Owned</b>: 0</p>
+                <button class="buyButton">buy 1</button>
+            </div>
+        </div>
+        <div id="upgradeCpcContainer">
+            <h2 id="stageCpc">upgrade cps (stage 1)</h2>
+            <button id="upgradeCpc" class="disabled">500 points</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

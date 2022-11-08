@@ -1,0 +1,360 @@
+@font-face {
+    font-family: font;
+    src: url(/assets/font.ttf);
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-image: linear-gradient(45deg, #090519, #493C86);
+    color: #ffffff;
+    overflow: hidden;
+}
+
+*{
+    cursor: url("/assets/cursors/default.png"), default;
+    user-select: none;
+}
+
+button{
+    cursor: url("/assets/cursors/pointer.png"), pointer;
+}
+
+button:active{
+    cursor: url("/assets/cursors/clicking.png"), pointer;
+}
+
+#upgrades{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #111;
+    box-shadow: 20px 0 40px 20px #11111150;
+}
+
+.upgrade{
+    display: flex;
+    line-height: 5px;
+    border: 1px #222 solid;
+    padding: 10px;
+    border-width: 0 0 1px 0;
+    font-family: font;
+}
+
+.upgrade img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.upgradeInfo{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buyButton{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    border-radius: 14px;
+    font-family: font;
+}
+
+#game{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    height: 100%;
+    width: 75%;
+}
+
+#game-center{
+    display: flexbox;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#clicks{
+    text-align: center;
+    font-size: 70px;
+    font-family: font;
+}
+
+#click{
+    background-image: url("/assets/click.png");
+    width: 449px;
+    height: 367px;
+    animation: pulse 2s infinite;
+    cursor: url("/assets/cursors/pointer.png"), pointer;
+    transition: rotate 0.2s;
+}
+
+#click:active{
+    rotate: -1deg;
+    cursor: url("/assets/cursors/clicking.png"), pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.feedback{
+    position: absolute;
+    bottom: 0;
+    font-size: 40px;
+    animation: feedback 1s;
+    font-family: font;
+}
+
+@keyframes feedback {
+    0%{
+        opacity: 0;
+        bottom: 50%;
+    }
+    100%{
+        opacity: 1;
+        bottom: 60%;
+    }
+}
+
+#intro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #090519, #493C86);
+    z-index: 5;
+    transition: opacity 3s;
+}
+
+#intro img{
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    animation: intro 1s cubic-bezier(.5, 2, .5, 1);
+    transform: scale(1) rotate(10deg) translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@keyframes intro {
+    0%{
+        transform: scale(0) rotate(0deg);
+    }
+    100%{
+        transform: scale(1) rotate(10deg) translate(-50%, -50%);
+    }
+}
+
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#upgradeCpc{
+    padding: 10px;
+    background-color: lawngreen;
+    border: 0;
+    border-radius: 14px;
+    color: #fff;
+    font-family: font;
+}
+
+#upgradeCpcContainer{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    line-height: 10px;
+    text-align: center;
+    font-family: font;
+}
+
+.lily{
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    width: 198px;
+    height: 331px;
+    background-image: url("/assets/lily.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: lily 1s;
+    cursor: url("/assets/cursors/pointer.png"), pointer;
+    transition: bottom 1s;
+}
+
+@keyframes lily {
+    0%{
+        bottom: -100%;
+    }
+    100%{
+        bottom: -100px;
+    }
+}
+
+#buyAmount{
+    border: 0;
+    padding: 10px;
+    border-radius: 14px;
+    margin: 15px 0 0 15px;
+}
+
+.bosley{
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    width: 433px;
+    height: 577px;
+    transform: translate(-50%, -50%) scale(2);
+    background-image: url("/assets/bosley.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: bosley .5s cubic-bezier(.5, 2, .5, 1);
+}
+
+@keyframes bosley {
+    0%{
+        transform: translate(-50%, -50%) scale(0) rotate(10deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+.farrah{
+    z-index: 10;
+    position: absolute;
+    right: -217px;
+    top: 50%;
+    width: 217px;
+    height: 283px;
+    background-image: url("/assets/farrah.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: farrah 1.5s;
+}
+
+@keyframes farrah {
+    0%{
+        right: -217px;
+        transform: rotate(0deg);
+    }
+    100%{
+        right: 110%;
+        transform: rotate(-360deg);
+    }
+}
+
+.achievement{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 300px;
+    background-color: #fff;
+    z-index: 10;
+    color: #000;
+    border-radius: 10px;
+    padding: 5px 10px;
+    line-height: 10px;
+    font-family: font;
+    animation: achievement .3s;
+    transition: right .3s;
+}
+
+.achievement img{
+    position: absolute;
+    right: 5px;
+    height: 90%;
+}
+
+@keyframes achievement {
+    0%{
+        opacity: 0;
+        right: -300px;
+    }
+    100%{
+        opacity: 1;
+        right: 10px;
+    }
+}
+
+.achievementPopup{
+    display: flex;
+    background-color: rgba(255, 255, 255, .95);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    z-index: 10;
+    flex-wrap: wrap;
+    box-shadow: 0 0 100px 0 rgba(0,0,0,0.4);
+    animation: popup .3s;
+    transition-property: opacity, transform;
+    transition-duration: .3s;
+}
+
+@keyframes popup {
+    0%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.achievementPopupachievement{
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    width: calc(50% - 30px);
+    margin: 5px;
+    padding: 5px 10px;
+    line-height: 10px;
+    font-family: font;
+}
+
+.achievementPopupachievement img{
+    position: absolute;
+    right: 5px;
+    height: 90%;
+}
+
+#showAchievements{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: font;
+    font-size: 20px;
+    color: #000;
+    border: 0;
+    border-radius: 14px;
+    padding: 10px;
+    background-color: #fff;
+    cursor: url("/assets/cursors/pointer.png"), pointer;
+    transition: opacity .3s;
+}
