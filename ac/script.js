@@ -138,7 +138,7 @@ for (let i = 0; i < buyButtons.length; i++) {
             item.owned++;
             item.price = Math.round(item.price * 1.15);
             data.cps += item.cps;
-            upgrade.querySelector('.upgradeInfo').innerHTML = `<b>Cost</b>: ${getLet(item.price.toString())} - <b>Owned</b>: ${item.owned}`;
+            upgrade.querySelector('.upgradeInfo').innerHTML = `<b>Cost</b>: ${formatNumber(item.price.toString())} - <b>Owned</b>: ${item.owned}`;
             updateClicks();
             updateDisabledUpgrades();
 
@@ -241,7 +241,7 @@ buyAmountElem.addEventListener("change", (event) => {
 });*/
 
 //abooby made this, im a theif
-function getLet(num, other) {
+function formatNumber(num, other) {
     if (num >= Math.pow(10, 303)) return ((Math.abs(num) / Math.pow(10, 303)).toFixed(1)) + 'H'
     if (num >= Math.pow(10, 63)) return ((Math.abs(num) / Math.pow(10, 63)).toFixed(1)) + 'G'
     if (num >= Math.pow(10, 60)) return ((Math.abs(num) / Math.pow(10, 60)).toFixed(1)) + 'C'
@@ -311,4 +311,28 @@ game.addEventListener("click", event => {
 });
 
 const showAchievements = document.getElementById("showAchievements");
-showAchievements.addEventListener("click", showAchievementPopup);
+showAchievements.addEventListener("click", () => {
+    if(!document.querySelector(".achievementPopup"))showAchievementPopup();
+});
+
+
+//save data and stuff
+if(localStorage.getItem("saveData")){
+    loadData(JSON.parse(atob(localStorage.getItem("saveData"))));
+}
+
+function loadData(saveData){
+    data = saveData;
+    clicksText.innerText = data.score;
+    for(let i in data.items){
+        const item = data.items[i];
+        const itemElem = document.getElementById(`upgrade${i}`).querySelector('.upgradeInfo');
+        itemElem.innerHTML = `<b>Cost</b>: ${formatNumber(item.price.toString())} <b>Owned</b>: ${item.owned}`;
+    }
+    stageCpc.innerText = `upgrade cps (stage ${data.cpcStage+1})`;
+    upgradeCpc.innerText = `${data.cpcCost} points`
+}
+
+window.onbeforeunload = function() {
+    localStorage.setItem("saveData", btoa(JSON.stringify(data)));
+}
